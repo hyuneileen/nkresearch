@@ -175,7 +175,7 @@ def metadata(bank):
     pandas.io.formats.excel.header_style = None
     df = pd.DataFrame.from_dict(bank)
     df =df.T
-    writer = pd.ExcelWriter('excel/bank.xlsx', engine='xlsxwriter')
+    writer = pd.ExcelWriter('metadata/bank.xlsx', engine='xlsxwriter')
     df.to_excel(writer, 'Sheet1')
     workbook = writer.book
     worksheet = writer.sheets['Sheet1']        
