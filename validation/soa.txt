@@ -1,0 +1,20 @@
+
+; <<>> DiG 9.10.6 <<>> -x 175.45.176.79
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 31364
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;79.176.45.175.in-addr.arpa.	IN	PTR
+
+;; AUTHORITY SECTION:
+176.45.175.in-addr.arpa. 3333	IN	SOA	ns1.kptc.kp. root.kptc.kp. 2013082900 28800 86400 1209600 3600
+
+;; Query time: 191 msec
+;; SERVER: 103.86.96.100#53(103.86.96.100)
+;; WHEN: Thu Jan 20 23:21:51 PST 2022
+;; MSG SIZE  rcvd: 107
+
