@@ -152,6 +152,9 @@ def metadata(bank):
     # (1) another json copy under /validation for jupyter notebook
     with open('validation/bank.json',"w") as f:
         json.dump(bank, f, ensure_ascii=False, indent=2)
+    # (1) another json copy under /gs for jupyter notebook
+    with open('gs/bank.json',"w") as f:
+        json.dump(bank, f, ensure_ascii=False, indent=2)
 
     ## (2) readable csv: metadata/bank.csv
     with open('metadata/bank.csv', 'w') as csv_file:  

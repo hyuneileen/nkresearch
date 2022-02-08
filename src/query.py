@@ -27,6 +27,7 @@ class ThreadPoolExecutorStackTraced(ThreadPoolExecutor):
                                                              # traceback as
                                                              # message
 
+
 def gs(idx,references,api_key):
     [md5hash,citation] = references[idx]
     if "종합대학학보" in citation: # north korean works arent indexed on gs
@@ -101,8 +102,6 @@ def gs(idx,references,api_key):
                 return match
             else:
                 return match
-        else:
-            return {"MD5":md5hash,"Citation":citation}
     return {"MD5":md5hash,"Citation":citation}
 
 
@@ -126,7 +125,7 @@ if __name__ == "__main__":
                         references.append([md5hash,str(citation)])
 
     if args.run == "rerun":
-        with open("gs/connection_lost","r") as f:
+        with open("refs/connection_lost","r") as f:
             references = json.load(f)
 
     with ThreadPoolExecutorStackTraced(max_workers=10) as executor:
@@ -143,9 +142,9 @@ if __name__ == "__main__":
                 connection_lost.append(references[index[i]])
             except TypeError:
                 type_error.append(references[index[i]])
-        fetched_fname = 'gs/fetched-'+str(args.start)+'-'+str(args.end)+'.json'
-        connection_lost_fname = 'gs/connection_lost-'+str(args.start)+'-'+str(args.end)+'.json'
-        type_error_fname = 'gs/type_error-'+str(args.start)+'-'+str(args.end)+'.json'
+        fetched_fname = 'refs/fetched-'+str(args.start)+'-'+str(args.end)+'.json'
+        connection_lost_fname = 'refs/connection_lost-'+str(args.start)+'-'+str(args.end)+'.json'
+        type_error_fname = 'refs/type_error-'+str(args.start)+'-'+str(args.end)+'.json'
         with open(fetched_fname, 'w') as f:
             json.dump(fetched, f, ensure_ascii=False, indent=2)
         with open(connection_lost_fname, 'w') as f:
