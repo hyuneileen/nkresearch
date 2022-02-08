@@ -64,7 +64,7 @@ def gs(idx,references,api_key):
                     return match
                 gs_id = match["id"].strip()
                 cite_url = "https://scholar.google.com/scholar?q=info:"+gs_id+":scholar.google.com/&output=cite&scirp=0&hl=en"
-                payload = {'api_key': '519867c2ad1206af28e018b1806db456', 'url':cite_url, 'render': 'false'}
+                payload = {'api_key': api_key, 'url':cite_url, 'render': 'false'}
                 soup = BeautifulSoup(requests.get('http://api.scraperapi.com',params=payload).content, "html.parser")
                 mla = soup.find("div", {"class": "gs_citr"})
                 if mla:
