@@ -1,0 +1,63 @@
+nkresearch
+├── bank.json
+├── corpus
+│   ├── ...
+│   ├── ...
+│   └── ...etc
+├── excel
+│   ├── all_publications.xlsx
+│   ├── citations.xlsx
+│   ├── collection_stats.xlsx
+│   ├── crawl_completeness.xlsx
+│   ├── crawled_info.xlsx
+│   ├── publications_by_year.xlsx
+│   └── yearly_stats.xlsx
+├── metadata
+│   ├── bank.csv
+│   ├── bank.pkl
+│   ├── bank.xlsx
+│   ├── multiindex.csv
+│   ├── multiindex.pkl
+│   ├── multiindex.xlsx
+│   └── multiindex_info.txt
+├── journals
+│   ├── ...
+│   ├── ...
+│   └── ...etc
+├── refs
+│   ├── asjc.pkl
+│   ├── ref_db.json
+│   └── scopus.xlsx
+├── src
+│   ├── crawled_info.json
+│   ├── crawler.py
+│   ├── custom_logger.py
+│   ├── data_generator.py
+│   ├── directory.py
+│   ├── directory_mapping.json
+│   ├── excel_generator.py
+│   ├── journal_info.json
+│   ├── metadata_extract.py
+│   ├── metadata_generator.py
+│   ├── query.py
+│   ├── refs_generator.py
+│   └── workspace.code-workspace
+├── streams
+│   ├── ...
+│   ├── ...
+│   └── ...etc
+└── validation
+    ├── bank.json
+    ├── collection_size.png
+    ├── collection_stats_by_year.xlsx
+    ├── comparison.ipynb
+    ├── levenshtein_avg.xlsx
+    ├── levenshtein_distribution.png
+    ├── nkresearch_missing.xlsx
+    ├── page_intervals.png
+    ├── replaced_articles.xlsx
+    ├── soa.txt
+    ├── unikorea_crawl.json
+    └── unikorea_missing.xlsx
+
+932 directories, 19674 files
